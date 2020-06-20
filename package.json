@@ -1,0 +1,23 @@
+{
+  "name": "microfrontend-shared-components",
+  "version": "1.0.0",
+  "description": "microfrontend-architecture with lerna monorepo and shared components",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"lerna run --scope @demo/* --parallel start\"",
+    "build": "lerna run --scope @demo/* build",
+    "serve": "lerna run --scope @demo/* --parallel serve",
+    "clean": "lerna run --scope @demo/* --parallel clean"
+  },
+  "keywords": [],
+  "author": "Anant Upadhyay",
+  "license": "Unlicense",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "lerna": "^3.21.0"
+  },
+  "workspaces": [
+    "demo/**"
+  ]
+}
